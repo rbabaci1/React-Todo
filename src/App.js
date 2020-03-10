@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      todos: [
+      todoList: [
         {
           id: 0,
           task: 'Finish React-Todo MVP!',
@@ -24,7 +24,7 @@ class App extends React.Component {
       <div>
         <h2>Welcome to your Todo App!</h2>
 
-        <TodoList todos={this.state.todos} />
+        <TodoList todoList={this.state.todoList} />
       </div>
     );
   }
