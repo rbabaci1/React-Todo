@@ -32,7 +32,7 @@ class App extends React.Component {
 
         <TodoList todoList={this.state.todoList} />
 
-        <TodoForm />
+        <TodoForm addTodo={this.addTodo} />
       </div>
     );
   }
