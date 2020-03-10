@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Todo = ({ todo }) => {
-  return <p>{todo.task}</p>;
+  return <p style={{ textDecoration: 'line-through' }}>{todo.task}</p>;
 };
 
 export default Todo;

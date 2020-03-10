@@ -13,12 +13,27 @@ class App extends React.Component {
           task: 'Finish React-Todo MVP!',
           completed: false
         }
-      ]
+      ],
+      newTodo: {
+        id: Date.now(),
+        task: '',
+        completed: false
+      }
     };
   }
-  addTodo = todo => {
+
+  addTodo = event => {
+    event.preventDefault();
+
     this.setState({
-      todoList: [...this.state.todoList, todo]
+      todoList: [...this.state.todoList, this.state.newTodo]
+    });
+    this.setState({ newTodo: { id: Date.now(), task: '', completed: false } });
+  };
+
+  handleChange = event => {
+    this.setState({
+      newTodo: { ...this.state.newTodo, task: event.target.value }
     });
   };
 
@@ -29,7 +44,11 @@ class App extends React.Component {
 
         <TodoList todoList={this.state.todoList} />
 
-        <TodoForm addTodo={this.addTodo} />
+        <TodoForm
+          addTodo={this.addTodo}
+          handleChange={this.handleChange}
+          value={this.state.newTodo.task}
+        />
       </div>
     );
   }
