@@ -9,9 +9,13 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      id: 0,
-      task: '',
-      completed: false
+      todos: [
+        {
+          id: 0,
+          task: 'Finish React-Todo MVP!',
+          completed: false
+        }
+      ]
     };
   }
 
@@ -20,7 +24,7 @@ class App extends React.Component {
       <div>
         <h2>Welcome to your Todo App!</h2>
 
-        <TodoList />
+        <TodoList todos={this.state.todos} />
       </div>
     );
   }
