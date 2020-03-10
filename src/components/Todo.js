@@ -1,5 +1,7 @@
 import React from 'react';
 
-const Todo = () => {
-  return null;
+const Todo = ({ todo }) => {
+  return <p>{todo.task}</p>;
 };
+
+export default Todo;
