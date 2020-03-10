@@ -51,6 +51,13 @@ class App extends React.Component {
     this.setState({ todoList: oldState });
   };
 
+  clearCompleted = () => {
+    const notCompletedList = this.state.todoList.filter(
+      todo => todo.completed === false
+    );
+    this.setState({ todoList: notCompletedList });
+  };
+
   render() {
     return (
       <div>
