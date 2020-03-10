@@ -1,23 +1,25 @@
 import React from 'react';
 
-const TodoForm = () => {
-  let newTodo = {
-    id: Date.now(),
-    task: '',
-    completed: false
-  };
+class TodoForm extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      id: Date.now(),
+      task: '',
+      completed: false
+    };
+  }
+  handleChange = event => this.setState({ task: event.target.value });
 
-  const handleChange = event => {
-    newTodo.task = event.target.value;
-  };
-
-  return (
-    <form>
-      <input type='text' placeholder='...todo' />
-      <button>Add Todo</button>
-      <button>Clear Completed</button>
-    </form>
-  );
-};
+  render() {
+    return (
+      <form>
+        <input type='text' placeholder='...todo' onChange={this.handleChange} />
+        <button>Add Todo</button>
+        <button>Clear Completed</button>
+      </form>
+    );
+  }
+}
 
 export default TodoForm;
