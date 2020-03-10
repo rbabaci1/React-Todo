@@ -16,6 +16,7 @@ class TodoForm extends React.Component {
       <form>
         <input type='text' placeholder='...todo' onChange={this.handleChange} />
         <button>Add Todo</button>
+        {console.log(this.state.task)}
         <button>Clear Completed</button>
       </form>
     );
