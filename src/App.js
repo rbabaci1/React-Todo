@@ -19,6 +19,11 @@ class App extends React.Component {
       ]
     };
   }
+  handleSubmit = todo => {
+    this.setState({
+      todoList: [...this.state.todoList, todo]
+    });
+  };
 
   render() {
     return (
