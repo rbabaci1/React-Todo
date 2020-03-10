@@ -2,9 +2,13 @@ import React from 'react';
 
 const TodoForm = () => {
   let newTodo = {
-    id: 0,
+    id: Date.now(),
     task: '',
     completed: false
+  };
+
+  const handleChange = event => {
+    newTodo.task = event.target.value;
   };
 
   return (
