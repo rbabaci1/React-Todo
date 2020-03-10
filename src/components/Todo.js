@@ -1,8 +1,18 @@
 import React from 'react';
 
-const Todo = ({ todo }) => {
+const Todo = ({ todo, toggleTodo }) => {
+  const testDecoration = {
+    textDecoration: todo.completed ? 'line-through' : 'none',
+    cursor: 'pointer'
+  };
+
   return (
-    <p style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
+    <p
+      onClick={() => {
+        toggleTodo(todo.id);
+      }}
+      style={testDecoration}
+    >
       {todo.task}
     </p>
   );
