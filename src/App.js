@@ -69,6 +69,7 @@ class App extends React.Component {
           addTodo={this.addTodo}
           handleChange={this.handleChange}
           value={this.state.newTodo.task}
+          clearCompleted={this.clearCompleted}
         />
       </div>
     );
