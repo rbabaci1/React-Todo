@@ -3,6 +3,7 @@ import React from 'react';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 
+import './components/Todo.css';
 class App extends React.Component {
   constructor() {
     super();
@@ -14,41 +15,25 @@ class App extends React.Component {
           task: 'Finish React-Todo MVP!',
           completed: false
         }
-      ],
-      newTodo: {
-        id: Date.now(),
-        task: '',
-        completed: false
-      }
+      ]
     };
   }
 
-  addTodo = event => {
-    event.preventDefault();
-
-    if (this.state.newTodo.task.length > 0) {
-      this.setState({
-        todoList: [...this.state.todoList, this.state.newTodo]
-      });
-
-      this.setState({
-        newTodo: { id: Date.now(), task: '', completed: false }
-      });
-    }
+  addTodo = todoTask => {
+    this.setState({
+      todoList: [
+        ...this.state.todoList,
+        { id: Date.now(), task: todoTask, completed: false }
+      ]
+    });
   };
 
-  handleChange = event =>
+  toggleTodo = todoId => {
     this.setState({
-      newTodo: { ...this.state.newTodo, task: event.target.value }
+      todoList: this.state.todoList.map(todo =>
+        todo.id === todoId ? { ...todo, completed: !todo.completed } : todo
+      )
     });
-
-  toggleTodo = id => {
-    const todoIndex = this.state.todoList.findIndex(todo => todo.id === id);
-    const oldState = this.state.todoList;
-
-    oldState[todoIndex].completed = !oldState[todoIndex].completed;
-
-    this.setState({ todoList: oldState });
   };
 
   clearCompleted = () => {
@@ -61,7 +46,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='App'>
         <h2>Welcome to your Todo App!</h2>
 
         <div className='todoList-wrapper'>
@@ -72,8 +57,6 @@ class App extends React.Component {
 
           <TodoForm
             addTodo={this.addTodo}
-            handleChange={this.handleChange}
-            value={this.state.newTodo.task}
             clearCompleted={this.clearCompleted}
           />
         </div>

@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    background: #24292e;
+    font-family: Ubuntu;
+}
+
+.App {
+    text-align: center;
+    margin: auto;
+}
+
+h2 {
+    margin: 30px 0;
+    color: #f7f7f7;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.todoList-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form-wrapper {
+    width: 46%;
+    margin: 20px 0;
+}
+
+form {
+    width: 100%;
+}
+
+form label {
+    display: flex;
+    align-items: center;
+}
+
+form label p {
+    color: #ceb34d;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+form label input {
+    width: 200px;
+    padding: 4px;
+    font-size: 22px;
+    flex-grow: 2;
+}
+
+.buttons {
+    width: fit-content;
+    margin: 20px 0 0 156px;
+}
+
+.buttons button {
+    font-size: 22px;
+    margin: 0 10px 10px 0;
+    border-radius: 100px;
+    padding: 5px 15px;
+    cursor: pointer;
+    color: #8b7214;
+    border: 0;
+}
+
+.buttons button:hover {
+    transition: 0.5s;
+    background: rgb(189, 161, 7);
+    color: rgb(47, 56, 65);
+}
+
+.list-items {
+    width: 50%;
+    margin: 20px 10px 0 10px;
+}
+
+.list-items p {
+    margin: 5px 0;
+    text-align: start;
+    padding: 5px;
+    border-bottom: 0.5px solid gray;
+    color: rgb(173, 120, 51);
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    font-size: 24px;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+.list-items p:hover {
+    transition: 1s;
+    background: rgb(202, 174, 17);
+    color: rgb(47, 56, 65);
+}
+
+@media (max-width: 1000px) {
+    .todoList-wrapper {
+        flex-direction: column-reverse;
+    }
+    .form-wrapper {
+        width: 90%;
+        margin: 20px auto;
+    }
+    .list-items {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
