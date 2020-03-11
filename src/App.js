@@ -10,7 +10,7 @@ class App extends React.Component {
     super();
 
     this.state = {
-      todoList: []
+      todoList: [{ task: 'Go to the Gym' }]
     };
   }
 
