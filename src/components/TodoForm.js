@@ -7,6 +7,7 @@ class TodoForm extends React.Component {
     this.state = {
       task: ''
     };
+    this.initialState = this.state;
   }
 
   handleChange = event =>
@@ -18,9 +19,7 @@ class TodoForm extends React.Component {
     event.preventDefault();
 
     this.state.task.length > 0 && this.props.addTodo(this.state.task);
-    this.setState({
-      task: ''
-    });
+    this.setState(this.initialState);
   };
 
   render() {

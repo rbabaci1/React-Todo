@@ -4,18 +4,13 @@ import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 
 import './components/Todo.css';
+
 class App extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      todoList: [
-        {
-          id: 1,
-          task: 'Finish React-Todo MVP!',
-          completed: false
-        }
-      ]
+      todoList: []
     };
   }
 
