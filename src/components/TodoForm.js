@@ -9,6 +9,7 @@ const TodoForm = ({ addTodo, handleChange, clearCompleted, value }) => {
         placeholder='...todo'
         value={value}
       />
+
       <button type='submit'>Add Todo</button>
       <button onClick={clearCompleted} type='button'>
         Clear Completed
