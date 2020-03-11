@@ -64,14 +64,19 @@ class App extends React.Component {
       <div>
         <h2>Welcome to your Todo App!</h2>
 
-        <TodoList todoList={this.state.todoList} toggleTodo={this.toggleTodo} />
+        <div className='todoList-wrapper'>
+          <TodoList
+            todoList={this.state.todoList}
+            toggleTodo={this.toggleTodo}
+          />
 
-        <TodoForm
-          addTodo={this.addTodo}
-          handleChange={this.handleChange}
-          value={this.state.newTodo.task}
-          clearCompleted={this.clearCompleted}
-        />
+          <TodoForm
+            addTodo={this.addTodo}
+            handleChange={this.handleChange}
+            value={this.state.newTodo.task}
+            clearCompleted={this.clearCompleted}
+          />
+        </div>
       </div>
     );
   }
