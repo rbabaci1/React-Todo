@@ -46,18 +46,18 @@ form label p {
 form label input {
     width: 200px;
     padding: 4px;
-    font-size: 22px;
+    font-size: 24px;
     flex-grow: 2;
+    border: 0;
+    outline: 0;
+    background: inherit;
+    border-bottom: 1px solid #f7f7f7;
+    color: #f7f7f7;
+    letter-spacing: 1px;
 }
 
-.buttons {
-    width: fit-content;
-    margin: 20px 0 0 156px;
-}
-
-.buttons button {
+button {
     font-size: 22px;
-    margin: 0 10px 10px 0;
     border-radius: 100px;
     padding: 5px 15px;
     cursor: pointer;
@@ -65,34 +65,45 @@ form label input {
     border: 0;
 }
 
-.buttons button:hover {
+button:hover {
     transition: 0.5s;
     background: rgb(189, 161, 7);
     color: rgb(47, 56, 65);
 }
 
+.addTodo-btn {
+    width: fit-content;
+    margin: 10px 151px 0 0px;
+}
+
 .list-items {
     width: 50%;
-    margin: 20px 10px 0 10px;
+    margin: 15px 10px;
 }
 
 .list-items p {
     margin: 5px 0;
     text-align: start;
-    padding: 5px;
+    padding: 5px 10px;
     border-bottom: 0.5px solid gray;
-    color: rgb(173, 120, 51);
     font-family: sans-serif;
     letter-spacing: 2px;
     font-size: 24px;
     width: fit-content;
-    border-radius: 5px;
+    border-radius: 3px;
+    background: rgb(202, 174, 17);
+    color: rgb(47, 56, 65);
 }
 
 .list-items p:hover {
-    transition: 1s;
-    background: rgb(202, 174, 17);
-    color: rgb(47, 56, 65);
+    transition: 0.5s;
+    cursor: pointer;
+    background: gold;
+}
+
+.list-items .todo-completed {
+    text-decoration: line-through;
+    background: #8c7e3c;
 }
 
 @media (max-width: 1000px) {

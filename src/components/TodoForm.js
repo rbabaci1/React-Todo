@@ -35,43 +35,21 @@ class TodoForm extends React.Component {
               placeholder='...todo'
               value={this.state.task}
             />
+
+            <button type='submit'>Add Todo</button>
           </label>
 
-          <div className='buttons'>
-            <button type='submit'>Add Todo</button>
-            <button onClick={this.props.clearCompleted} type='button'>
-              Clear Completed
-            </button>
-          </div>
+          <button
+            onClick={this.props.clearCompleted}
+            type='button'
+            className='addTodo-btn'
+          >
+            Clear Completed
+          </button>
         </form>
       </div>
     );
   }
 }
-
-// const TodoForm = ({ addTodo, handleChange, clearCompleted, value }) => {
-// return (
-//   <div className='form-wrapper'>
-//     <form onSubmit={addTodo}>
-//       <label>
-//         <p>Enter a Todo</p>
-//         <input
-//           onChange={handleChange}
-//           type='text'
-//           placeholder='...todo'
-//           value={value}
-//         />
-//       </label>
-
-//       <div className='buttons'>
-//         <button type='submit'>Add Todo</button>
-//         <button onClick={clearCompleted} type='button'>
-//           Clear Completed
-//         </button>
-//       </div>
-//     </form>
-//   </div>
-// );
-// };
 
 export default TodoForm;
