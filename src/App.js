@@ -47,7 +47,9 @@ class App extends React.Component {
   render() {
     return (
       <div className='App'>
-        <h2>Welcome to your Todo App!</h2>
+        <div className='header'>
+          <h2>Welcome to just do it App!</h2>
+        </div>
 
         <div className='todoList-wrapper'>
           <TodoList
