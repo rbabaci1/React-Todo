@@ -133,7 +133,7 @@ button:hover {
 .search-input {
     width: fit-content;
     align-self: flex-end;
-    background: #181b1d;
+    background: rgba(51, 50, 50, 0.7);
     padding: 5px 20px;
     border-radius: 100px;
 }
@@ -148,6 +148,10 @@ button:hover {
     color: #f7f7f7;
     letter-spacing: 1px;
     margin-left: 10px;
+}
+
+.search-input input::placeholder {
+    color: rgb(184, 182, 180);
 }
 
 .search-input span {
