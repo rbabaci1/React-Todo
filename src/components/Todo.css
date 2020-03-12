@@ -91,12 +91,18 @@ button:hover {
     margin: 10px 151px 0 0px;
 }
 
+.right-section {
+    width: 50%;
+    box-sizing: border-box;
+    margin: 15px 10px;
+}
+
 .list-items {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin: 15px 10px;
+    width: 100%;
+    margin: 15px 0;
     padding: 10px;
     background-image: url('https://cdn.pixabay.com/photo/2012/03/03/23/06/backdrop-21534__340.jpg');
     background-repeat: no-repeat;
@@ -106,14 +112,14 @@ button:hover {
 }
 
 .list-items p {
-    margin: 5px 0;
+    margin: 5px 2px 0 5px;
     text-align: start;
+    width: fit-content;
     padding: 5px 10px;
     border-bottom: 0.5px solid gray;
     font-family: sans-serif;
     letter-spacing: 2px;
     font-size: 24px;
-    width: fit-content;
     border-radius: 3px;
     background: rgb(212, 183, 15);
     color: rgb(47, 56, 65);
@@ -133,9 +139,10 @@ button:hover {
 .search-input {
     width: fit-content;
     align-self: flex-end;
-    background: rgba(51, 50, 50, 0.7);
+    background: rgb(61, 60, 60);
     padding: 5px 20px;
     border-radius: 100px;
+    margin: 10px 0;
 }
 
 .search-input input {
@@ -166,11 +173,18 @@ button:hover {
         flex-direction: column-reverse;
     }
     .form-wrapper {
-        width: 90%;
+        width: 100%;
         margin: 20px auto;
     }
     .list-items {
         width: 90%;
         margin: 20px auto;
+    }
+    form label p {
+        margin: 0;
+    }
+    form label input {
+        width: 400px;
+        flex-grow: 0;
     }
 }

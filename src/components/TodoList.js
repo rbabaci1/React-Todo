@@ -23,7 +23,7 @@ class TodoList extends React.Component {
     );
 
     return (
-      <div className='list-items'>
+      <div className='right-section'>
         <section className='search-input'>
           <label>
             <span role='img' aria-label='search icon'>
@@ -37,14 +37,16 @@ class TodoList extends React.Component {
             />
           </label>
         </section>
-        {filteredTodoList.map((todo, index) => (
-          <Todo
-            todo={todo}
-            toggleTodo={this.props.toggleTodo}
-            key={todo.id}
-            num={index}
-          />
-        ))}
+        <div className='list-items'>
+          {filteredTodoList.map((todo, index) => (
+            <Todo
+              todo={todo}
+              toggleTodo={this.props.toggleTodo}
+              key={todo.id}
+              num={index}
+            />
+          ))}
+        </div>
       </div>
     );
   }
