@@ -10,7 +10,7 @@ class App extends React.Component {
     super();
 
     this.state = {
-      todoList: [{ task: 'Go to the Gym' }]
+      todoList: [{ id: 1, task: 'Go to the Gym', completed: false }]
     };
   }
 

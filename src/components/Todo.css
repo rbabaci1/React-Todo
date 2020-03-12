@@ -90,6 +90,8 @@ button:hover {
 }
 
 .list-items {
+    display: flex;
+    flex-direction: column;
     width: 50%;
     margin: 15px 10px;
 }
@@ -117,6 +119,33 @@ button:hover {
 .list-items .todo-completed {
     text-decoration: line-through;
     background: #8c7e3c;
+}
+
+.search-input {
+    width: fit-content;
+    align-self: flex-end;
+    background: #181b1d;
+    padding: 5px 20px;
+    border-radius: 100px;
+}
+
+.search-input input {
+    box-sizing: border-box;
+    padding: 4px;
+    font-size: 24px;
+    border: 0;
+    outline: 0;
+    background: inherit;
+    color: #f7f7f7;
+    letter-spacing: 1px;
+    margin-left: 10px;
+}
+
+.search-input span {
+    font-size: 26px;
+    padding-right: 10px;
+    border-right: 1px solid gray;
+    cursor: pointer;
 }
 
 @media (max-width: 1080px) {
