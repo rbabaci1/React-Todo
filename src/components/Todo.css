@@ -37,8 +37,10 @@ h2 {
 }
 
 .form-wrapper {
+    box-sizing: border-box;
     width: 46%;
     margin: 20px 0;
+    padding: 10px;
 }
 
 form {
@@ -90,10 +92,17 @@ button:hover {
 }
 
 .list-items {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     width: 50%;
     margin: 15px 10px;
+    padding: 10px;
+    background-image: url('https://cdn.pixabay.com/photo/2012/03/03/23/06/backdrop-21534__340.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0px 0px 10px black;
 }
 
 .list-items p {
@@ -106,7 +115,7 @@ button:hover {
     font-size: 24px;
     width: fit-content;
     border-radius: 3px;
-    background: rgb(202, 174, 17);
+    background: rgb(212, 183, 15);
     color: rgb(47, 56, 65);
 }
 
@@ -118,7 +127,7 @@ button:hover {
 
 .list-items .todo-completed {
     text-decoration: line-through;
-    background: #8c7e3c;
+    background: rgba(212, 183, 15, 0.6);
 }
 
 .search-input {

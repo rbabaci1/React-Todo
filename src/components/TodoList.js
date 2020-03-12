@@ -18,6 +18,10 @@ class TodoList extends React.Component {
     });
 
   render() {
+    const filteredTodoList = this.props.todoList.filter(todo =>
+      todo.task.toLowerCase().includes(this.state.searchTerm.toLowerCase())
+    );
+
     return (
       <div className='list-items'>
         <section className='search-input'>
@@ -33,7 +37,7 @@ class TodoList extends React.Component {
             />
           </label>
         </section>
-        {this.props.todoList.map((todo, index) => (
+        {filteredTodoList.map((todo, index) => (
           <Todo
             todo={todo}
             toggleTodo={this.props.toggleTodo}
