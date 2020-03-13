@@ -1,190 +1,199 @@
 body {
-    margin: 0;
-    background: #24292e;
-    font-family: Ubuntu;
+  margin: 0;
+  background: #24292e;
+  font-family: Ubuntu;
 }
 
 .App {
-    text-align: center;
-    margin: auto;
+  text-align: center;
+  margin: auto;
 }
 
 .header {
-    width: 100%;
-    text-align: center;
-    margin: 30px 0 50px 0;
+  width: 100%;
+  text-align: center;
+  margin: 30px 0 50px 0;
 }
 
 h2 {
-    color: #f7f7f7;
-    font-size: 32px;
-    font-weight: 400;
-    color: #d4d4ce;
-    width: fit-content;
-    margin: auto;
-    padding: 5px 15px;
-    border-left: 2px solid #f9d406;
-    border-right: 2px solid #f9d406;
-    border-bottom: 2px dashed;
-    border-top: 2px dashed;
+  color: #f7f7f7;
+  font-size: 32px;
+  font-weight: 400;
+  color: #d4d4ce;
+  width: fit-content;
+  margin: auto;
+  padding: 5px 15px;
+  border-left: 2px solid #f9d406;
+  border-right: 2px solid #f9d406;
+  border-bottom: 2px dashed;
+  border-top: 2px dashed;
 }
 
 .todoList-wrapper {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .form-wrapper {
-    box-sizing: border-box;
-    width: 46%;
-    margin: 20px 0;
-    padding: 10px;
+  box-sizing: border-box;
+  width: 46%;
+  margin: 20px 0;
+  padding: 10px;
 }
 
 form {
-    width: 100%;
+  width: 100%;
 }
 
 form label {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 form label p {
-    color: #ceb34d;
-    margin: 0 10px;
-    font-size: 24px;
+  color: #ceb34d;
+  margin: 0 10px;
+  font-size: 24px;
 }
 
 form label input {
-    width: 200px;
-    padding: 4px;
-    font-size: 24px;
-    flex-grow: 2;
-    border: 0;
-    outline: 0;
-    background: inherit;
-    border-bottom: 1px solid #f7f7f7;
-    color: #f7f7f7;
-    letter-spacing: 1px;
+  width: 200px;
+  padding: 4px;
+  font-size: 24px;
+  flex-grow: 2;
+  border: 0;
+  outline: 0;
+  background: inherit;
+  border-bottom: 1px solid #f7f7f7;
+  color: #f7f7f7;
+  letter-spacing: 1px;
 }
 
 button {
-    font-size: 22px;
-    border-radius: 100px;
-    padding: 5px 15px;
-    cursor: pointer;
-    color: #8b7214;
-    border: 0;
+  font-size: 22px;
+  border-radius: 100px;
+  padding: 5px 15px;
+  cursor: pointer;
+  color: #8b7214;
+  border: 0;
 }
 
 button:hover {
-    transition: 0.5s;
-    background: rgb(189, 161, 7);
-    color: rgb(47, 56, 65);
+  transition: 0.5s;
+  background: rgb(189, 161, 7);
+  color: rgb(47, 56, 65);
 }
 
 .addTodo-btn {
-    width: fit-content;
-    margin: 10px 151px 0 0px;
+  width: fit-content;
+  margin: 10px 151px 0 0px;
 }
 
 .right-section {
-    width: 50%;
-    box-sizing: border-box;
-    margin: 15px 10px;
+  width: 50%;
+  box-sizing: border-box;
+  margin: 15px 10px;
 }
 
 .list-items {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 15px 0;
-    padding: 10px;
-    background-image: url('https://cdn.pixabay.com/photo/2012/03/03/23/06/backdrop-21534__340.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    box-shadow: inset 0px 0px 10px black;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 15px 0;
+  padding: 10px;
+  background-image: url('https://cdn.pixabay.com/photo/2012/03/03/23/06/backdrop-21534__340.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0px 0px 10px black;
 }
 
 .list-items p {
-    margin: 5px 2px 0 5px;
-    text-align: start;
-    width: fit-content;
-    padding: 5px 10px;
-    border-bottom: 0.5px solid gray;
-    font-family: sans-serif;
-    letter-spacing: 2px;
-    font-size: 24px;
-    border-radius: 3px;
-    background: rgb(212, 183, 15);
-    color: rgb(47, 56, 65);
+  margin: 5px 2px 0 5px;
+  text-align: start;
+  width: fit-content;
+  padding: 5px 10px;
+  border-bottom: 0.5px solid gray;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  font-size: 24px;
+  border-radius: 3px;
+  background: rgb(212, 183, 15);
+  color: rgb(47, 56, 65);
 }
 
 .list-items p:hover {
-    transition: 0.5s;
-    cursor: pointer;
-    background: gold;
+  transition: 0.5s;
+  cursor: pointer;
+  background: gold;
 }
 
 .list-items .todo-completed {
-    text-decoration: line-through;
-    background: rgba(212, 183, 15, 0.6);
+  text-decoration: line-through;
+  background: rgba(212, 183, 15, 0.6);
 }
 
 .search-input {
-    width: fit-content;
-    align-self: flex-end;
-    background: rgb(61, 60, 60);
-    padding: 5px 20px;
-    border-radius: 100px;
-    margin: 10px 0;
+  width: fit-content;
+  align-self: flex-end;
+  background: rgb(61, 60, 60);
+  padding: 5px 20px;
+  border-radius: 100px;
+  margin: 10px 0;
 }
 
 .search-input input {
-    box-sizing: border-box;
-    padding: 4px;
-    font-size: 24px;
-    border: 0;
-    outline: 0;
-    background: inherit;
-    color: #f7f7f7;
-    letter-spacing: 1px;
-    margin-left: 10px;
+  box-sizing: border-box;
+  padding: 4px;
+  font-size: 24px;
+  border: 0;
+  outline: 0;
+  background: inherit;
+  color: #f7f7f7;
+  letter-spacing: 1px;
+  margin-left: 10px;
 }
 
 .search-input input::placeholder {
-    color: rgb(184, 182, 180);
+  color: rgb(184, 182, 180);
 }
 
 .search-input span {
-    font-size: 26px;
-    padding-right: 10px;
-    border-right: 1px solid gray;
-    cursor: pointer;
+  font-size: 26px;
+  padding-right: 10px;
+  border-right: 1px solid gray;
+  cursor: pointer;
 }
 
 @media (max-width: 1080px) {
-    .todoList-wrapper {
-        flex-direction: column-reverse;
-    }
-    .form-wrapper {
-        width: 100%;
-        margin: 20px auto;
-    }
-    .list-items {
-        width: 90%;
-        margin: 20px auto;
-    }
-    form label p {
-        margin: 0;
-    }
-    form label input {
-        width: 400px;
-        flex-grow: 0;
-    }
+  .todoList-wrapper {
+    flex-direction: column-reverse;
+  }
+  .form-wrapper {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  form label p {
+    margin: 0;
+  }
+  form label input {
+    width: 400px;
+    flex-grow: 0;
+  }
+  .right-section {
+    width: 98%;
+  }
+}
+@media (max-width: 500px) {
+  form label {
+    flex-direction: column;
+  }
+  form button {
+    align-self: flex-start;
+    margin-top: 10px;
+  }
 }
