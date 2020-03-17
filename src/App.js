@@ -2,42 +2,31 @@ import React from 'react';
 
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
+import {
+  setLocalStorage,
+  getClearedStorage,
+  setToggleTodo
+} from './components/setLocalStorage';
 
 import './components/Todo.css';
 
 class App extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      todoList: [{ id: 1, task: 'Go to the Gym', completed: false }]
-    };
-  }
+  state = {
+    todoList: setLocalStorage('todoList')
+  };
 
   addTodo = todoTask => {
     this.setState({
-      todoList: [
-        ...this.state.todoList,
-        { id: Date.now(), task: todoTask, completed: false }
-      ]
+      todoList: setLocalStorage('todoList', todoTask)
     });
   };
 
   toggleTodo = todoId => {
-    this.setState({
-      todoList: this.state.todoList.map(todo =>
-        todo.id === todoId ? { ...todo, completed: !todo.completed } : todo
-      )
-    });
+    this.setState({ todoList: setToggleTodo('todoList', todoId) });
   };
 
-  clearCompleted = () => {
-    const notCompletedList = this.state.todoList.filter(
-      todo => !todo.completed
-    );
-
-    this.setState({ todoList: notCompletedList });
-  };
+  clearCompleted = () =>
+    this.setState({ todoList: getClearedStorage('todoList') });
 
   render() {
     return (
