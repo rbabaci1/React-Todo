@@ -12,5 +12,4 @@ const Todo = ({ todo, toggleTodo, num }) => {
     </div>
   );
 };
-
 export default Todo;
